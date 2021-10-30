@@ -1,0 +1,106 @@
+@media screen and (max-width: 720px) {
+  .socialNetwork {
+    &__menu {
+      position: absolute;
+      top: 80px;
+      bottom: 80px;
+      left: -100%;
+      transition: left 0.4s cubic-bezier(0.2, 0.1, 0.5, 0.5);
+      z-index: 1;
+    }
+  }
+}
+
+.socialNetwork__header {
+  display: flex;
+  width: 100%;
+  background-color: aqua;
+  height: 80px;
+  box-shadow: 0 1px 10px 0 rgba(black, 0.1);
+  padding: 15px 20px;
+  align-items: center;
+}
+
+.header {
+  &__burger {
+    min-width: 40px;
+    width: 40px;
+    min-height: 40px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__burgerRow {
+    display: inline-block;
+    width: calc(100% - 10px);
+    height: 2px;
+    background-color: black;
+    margin: 0 auto;
+
+    &::after,
+    &::before {
+      content: '';
+      width: calc(100% - 10px);
+      height: 2px;
+      background-color: black;
+      display: inline-block;
+      position: absolute;
+      top: calc(50% + 7px);
+    }
+
+    &::before {
+      top: calc(50% - 9px);
+    }
+  }
+
+  &__checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    pointer-events: none;
+
+    &:checked ~ .socialNetwork__menu {
+      left: 0;
+    }
+  }
+}
+
+.socialNetwork {
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    min-width: 180px;
+    background-color: beige;
+    padding: 15px 20px;
+    height: calc(100% - 160px);
+    overflow: auto;
+  }
+}
+
+.menu {
+  &__link {
+    color: black;
+    display: inline-block;
+    width: max-content;
+    transition: color 0.2s linear;
+
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+
+    &:hover {
+      color: lightgray;
+    }
+
+    &.active {
+      color: red;
+    }
+  }
+}

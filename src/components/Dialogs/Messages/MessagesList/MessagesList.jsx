@@ -1,0 +1,1 @@
+import MessagesList.module.scss from './MessagesList.module.scss';

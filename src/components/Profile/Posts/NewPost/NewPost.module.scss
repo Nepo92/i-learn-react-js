@@ -1,0 +1,27 @@
+.posts {
+  &__newMessage {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__textarea {
+    display: flex;
+    height: 80px;
+    resize: none;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #e1e1e1;
+  }
+
+  &__button {
+    display: inline-block;
+    width: 160px;
+    height: 40px;
+    border-radius: 5px;
+    border: 0;
+    margin-top: 15px;
+    margin-left: auto;
+    cursor: pointer;
+    background-color: lightgray;
+  }
+}
